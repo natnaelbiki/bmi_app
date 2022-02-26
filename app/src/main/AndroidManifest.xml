@@ -10,7 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BMIAPP">
         <activity
-            android:name=".MainActivity"
+            android:name=".BmiActivity"
+            android:exported="false"
+            android:label="@string/title_activity_bmi"
+            android:theme="@style/Theme.BMIAPP.NoActionBar" />
+        <activity
+            android:name=".AboutActivity"
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
