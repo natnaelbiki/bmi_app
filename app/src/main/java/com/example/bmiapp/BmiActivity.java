@@ -96,8 +96,9 @@ public class BmiActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;
     }
+    //about us menu click listener
     public void onAboutUsClick(MenuItem item) {
-        Intent about = new Intent(BmiActivity.this,AboutActivity.class);
+        Intent about = new Intent(BmiActivity.this,AboutUsActivity.class);
         startActivity(about);
         finish();
 
