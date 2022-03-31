@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BMIAPP">
         <activity
-            android:name=".newActivity"
+            android:name=".mainActivity"
             android:exported="false"
             android:label="@string/title_activity_new"
             android:theme="@style/Theme.BMIAPP.NoActionBar" />

@@ -18,7 +18,7 @@
     <fragment
         android:id="@+id/SecondFragment"
         android:name="com.example.bmiapp.SecondFragment"
-        android:label="@string/second_fragment_label"
+        android:label="@string/about_us"
         tools:layout="@layout/fragment_second">
 
         <action
