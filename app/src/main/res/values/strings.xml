@@ -10,14 +10,14 @@
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="previous">Back</string>
 
 
     <string name="title_activity_bmi">Bmi Calculater</string>
     <string name="settings">Settings</string>
     <string name="about_us">About Us</string>
     <string name="back_btn">Back</string>
-    <string name="about_us_content">This Software is Designed and Distributed under licence</string>
+    <string name="about_us_content">This Software is Designed and Distributed under licence. Developed by Natnael Biki</string>
     <string name="title_activity_about_us">About Us</string>
 
     <string name="about_menu_settings">Settings</string>
@@ -27,6 +27,7 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="about_menu_back">Back</string>
     <string name="bmi_for_kids">BMI for Kids</string>
+    <string name="title_activity_new">newActivity</string>
     <!-- Strings used for fragments for navigation -->
 
 </resources>
