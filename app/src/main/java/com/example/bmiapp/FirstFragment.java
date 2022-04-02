@@ -68,19 +68,33 @@ public class FirstFragment extends Fragment {
                 }catch (Exception e) {
                     Toast.makeText(getActivity(), e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                 }
-                double height_in_meter = Double.parseDouble(String.valueOf(txt_height.getText()));
-                double weight_in_kg = Double.parseDouble(String.valueOf(txt_weight.getText()));
-                if (height_in_meter > 0 && weight_in_kg > 0) {
-                    try {
-                        double bmi = getBmi(weight_in_kg, height_in_meter);
-                        bmi = Double.parseDouble(df.format(bmi));
-                        txt_result_bmi.setText("BMI: "+bmi);
-                        txt_result_cat.setText(getCategory(bmi));
-                    }catch (Exception e)
-                    {
-                        Toast.makeText(getActivity(), e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-                    }
+                try {
 
+
+                    double height_in_meter = Double.parseDouble(String.valueOf(txt_height.getText()));
+                    double weight_in_kg = Double.parseDouble(String.valueOf(txt_weight.getText()));
+                    if (height_in_meter > 0 && height_in_meter < 2.5) {
+                        if (weight_in_kg > 0 && weight_in_kg < 200){
+                            try {
+                                double bmi = getBmi(weight_in_kg, height_in_meter);
+                                bmi = Double.parseDouble(df.format(bmi));
+                                txt_result_bmi.setText("BMI: "+bmi);
+                                txt_result_cat.setText(getCategory(bmi));
+                            }catch (Exception e)
+                            {
+                                Toast.makeText(getActivity(), e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                        else if(weight_in_kg<0 || weight_in_kg>200){
+                            Toast.makeText(getActivity(), "Wrong Weight Input", Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+                    else if(height_in_meter < 0 || height_in_meter > 2.5){
+                        Toast.makeText(getActivity(), "Wrong Height Input", Toast.LENGTH_SHORT).show();
+                    }
+                }catch (Exception e){
+                    Toast.makeText(getActivity(), "Ops..Something went wrong!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -108,7 +122,9 @@ public class FirstFragment extends Fragment {
         else if (bmi>=30){
             s = ("Obese: you will need to lose weight or you will be more susceptible to severe health complications");
         }
-        else
+        else{
+            s = "Ops..Something went wrong";
+        }
         return s;
     }
 
