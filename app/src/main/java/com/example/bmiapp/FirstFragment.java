@@ -108,6 +108,7 @@ public class FirstFragment extends Fragment {
         else if (bmi>=30){
             s = ("Obese: you will need to lose weight or you will be more susceptible to severe health complications");
         }
+        else
         return s;
     }
 
