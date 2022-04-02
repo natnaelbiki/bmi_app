@@ -47,8 +47,6 @@ public class FirstFragment extends Fragment {
         });
         txt_result_bmi = view.findViewById(R.id.txt_result_bmi);
         txt_result_cat = view.findViewById(R.id.txt_result_cat);
-        txt_result_bmi.setText("BMI: 20");
-        txt_result_cat.setText("Healthy");
         txt_height = view.findViewById(R.id.txt_height);
         txt_weight = view.findViewById(R.id.txt_weight);
         calculate_bt = view.findViewById(R.id.btn_calculate);
